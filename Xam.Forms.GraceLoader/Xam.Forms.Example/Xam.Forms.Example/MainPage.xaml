@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:graceLoader="clr-namespace:Xam.Forms.GraceLoader;assembly=Xam.Forms.GraceLoader"
+             xmlns:example="clr-namespace:Xam.Forms.Example;assembly=Xam.Forms.Example"
+             x:DataType="example:MainViewModel"
+             x:Class="Xam.Forms.Example.MainPage">
+
+    <Grid
+        Margin="10,10"
+        RowDefinitions="*,Auto">
+        <StackLayout
+            TranslationY="-100"
+            Grid.Row="0"
+            VerticalOptions="Center"
+            Orientation="Vertical">
+            <Label
+                TextColor="Black"
+                HorizontalOptions="Center"
+                Text="Welcome to GraceLoader!" />
+            <Label
+                TextColor="Black"
+                HorizontalOptions="Center"
+                Text="Push the button below to start loading!" />
+        </StackLayout>
+        <Button
+            Margin="0,0,0,10"
+            Grid.Row="1"
+            BackgroundColor="Aquamarine"
+            TextColor="Black"
+            Text="Load"
+            HorizontalOptions="FillAndExpand"
+            Command="{Binding LoadCommand}" />
+        <graceLoader:GraceLoaderView
+            Grid.Row="0"
+            Grid.RowSpan="2"
+            IsVisible="{Binding IsBusy}"
+            LoadingTextColor="Black"
+            LoadingText="Loading" />
+    </Grid>
+
+</ContentPage>

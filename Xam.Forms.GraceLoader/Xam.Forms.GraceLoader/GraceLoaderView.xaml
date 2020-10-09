@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:markup="clr-namespace:Xam.Forms.GraceLoader;assembly=Xam.Forms.GraceLoader"
+             x:Class="Xam.Forms.GraceLoader.GraceLoaderView">
+    
+    <!-- <pancakeView:PancakeView -->
+    <!--     Margin="10" -->
+    <!--     CornerRadius="10" -->
+    <!--     HeightRequest="300" -->
+    <!--     BackgroundColor="{StaticResource Blue}" -->
+    <!--     VerticalOptions="Center" -->
+    <!--     HorizontalOptions="FillAndExpand" -->
+    <!-- > -->
+        <!-- <pancakeView:PancakeView -->
+        <!--     Margin="20" -->
+        <!--     CornerRadius="10" -->
+        <!--     BackgroundColor="White" -->
+        <!--     VerticalOptions="FillAndExpand" -->
+        <!--     HorizontalOptions="FillAndExpand" -->
+        <!-- > -->
+            <StackLayout
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                Orientation="Vertical">
+                <ActivityIndicator
+                    Color="Black"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center"
+                    IsRunning="True"
+                />
+                <Label
+                    x:Name="LoadingLabel"
+                    HorizontalOptions="Center"
+                    FontSize="Medium"
+                />
+            </StackLayout>
+        <!-- </pancakeView:PancakeView> -->
+
+    <!-- </pancakeView:PancakeView> -->
+</ContentView>
