@@ -9,7 +9,7 @@
         HorizontalOptions="Center"
         Orientation="Vertical">
         <ActivityIndicator
-            Color="Black"
+            x:Name="Indicator"
             VerticalOptions="Center"
             HorizontalOptions="Center"
             IsRunning="True" />

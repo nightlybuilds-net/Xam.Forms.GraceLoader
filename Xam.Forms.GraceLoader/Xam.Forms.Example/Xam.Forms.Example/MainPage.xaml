@@ -37,6 +37,7 @@
             Grid.RowSpan="2"
             IsVisible="{Binding IsBusy}"
             LoadingTextColor="Black"
+            ActivityIndicatorColor="Red"
             LoadingText="Loading" />
     </Grid>
 

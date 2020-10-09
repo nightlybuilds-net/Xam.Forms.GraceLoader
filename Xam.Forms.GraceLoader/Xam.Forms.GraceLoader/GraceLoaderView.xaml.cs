@@ -43,5 +43,17 @@ namespace Xam.Forms.GraceLoader
                 this.LoadingLabel.TextColor = this.LoadingTextColor;
             }
         }
+        
+        private Color _activityIndicatorColor;
+        public Color ActivityIndicatorColor
+        {
+            get => this._activityIndicatorColor;
+            set
+            {
+                if (value == this._activityIndicatorColor) return;
+                this._activityIndicatorColor = value;
+                this.Indicator.Color = this.ActivityIndicatorColor;
+            }
+        }
     }
 }
