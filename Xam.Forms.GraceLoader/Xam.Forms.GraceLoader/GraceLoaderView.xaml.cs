@@ -8,6 +8,16 @@ namespace Xam.Forms.GraceLoader
         public GraceLoaderView()
         {
             InitializeComponent();
+
+            this.PropertyChanged += async (sender, args) =>
+            {
+                if (args.PropertyName == "IsVisible")
+                {
+                    var isVisible = ((GraceLoaderView) sender).IsVisible;
+                    if (isVisible)
+                        await this.Container.FadeTo(1,2000);
+                }
+            };
         }
         
         public static readonly BindableProperty LoadingTextProperty =
