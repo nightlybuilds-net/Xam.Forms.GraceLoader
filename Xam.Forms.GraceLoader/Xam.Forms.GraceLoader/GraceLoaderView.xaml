@@ -10,19 +10,24 @@
         HorizontalOptions="Center"
         x:Name="Container"
         >
-        <StackLayout
-            VerticalOptions="Center"
-            HorizontalOptions="Center"
-            Orientation="Vertical">
+        <Grid
+            Margin="5"
+            RowDefinitions="Auto,Auto,Auto">
+            <Image
+                Grid.Row="0"
+                x:Name="Image"
+                Aspect="AspectFit"/>
             <ActivityIndicator
+                Grid.Row="1"
                 x:Name="Indicator"
                 VerticalOptions="Center"
                 HorizontalOptions="Center"
                 IsRunning="True" />
             <Label
+                Grid.Row="2"
                 x:Name="LoadingLabel"
                 HorizontalOptions="Center"
                 FontSize="Medium" />
-        </StackLayout>
+</Grid>
     </Frame>
 </ContentView>

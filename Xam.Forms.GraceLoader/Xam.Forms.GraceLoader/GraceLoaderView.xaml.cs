@@ -101,6 +101,18 @@ namespace Xam.Forms.GraceLoader
                 this._containerWidth = value;
                 this.Container.WidthRequest = this.ContainerWidth;
             }
+        }        
+        
+        private string _imageUri;
+        public string ImageUri
+        {
+            get => this._imageUri;
+            set
+            {
+                if (value == this._imageUri) return;
+                this._imageUri = value;
+                this.Image.Source = this.ImageUri;
+            }
         }
         
         private ContainerType _containerType;

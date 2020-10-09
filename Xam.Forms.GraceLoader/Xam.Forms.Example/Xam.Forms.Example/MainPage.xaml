@@ -40,9 +40,11 @@
             LoadingTextColor="Black"
             ActivityIndicatorColor="DarkBlue"
             ContainerColor="Aquamarine"
-            ContainerWidth="100"
-            ContainerHeight="100"
+            ContainerWidth="200"
+            ContainerHeight="260"
             ContainerType="Square"
+            ImageUri="https://avatars3.githubusercontent.com/u/63703168"
+
         />
     </Grid>
 
