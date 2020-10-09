@@ -4,18 +4,25 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:markup="clr-namespace:Xam.Forms.GraceLoader;assembly=Xam.Forms.GraceLoader"
              x:Class="Xam.Forms.GraceLoader.GraceLoaderView">
-    <StackLayout
+    <Frame
+        Padding="0"
         VerticalOptions="Center"
         HorizontalOptions="Center"
-        Orientation="Vertical">
-        <ActivityIndicator
-            x:Name="Indicator"
+        x:Name="Container"
+        >
+        <StackLayout
             VerticalOptions="Center"
             HorizontalOptions="Center"
-            IsRunning="True" />
-        <Label
-            x:Name="LoadingLabel"
-            HorizontalOptions="Center"
-            FontSize="Medium" />
-    </StackLayout>
+            Orientation="Vertical">
+            <ActivityIndicator
+                x:Name="Indicator"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                IsRunning="True" />
+            <Label
+                x:Name="LoadingLabel"
+                HorizontalOptions="Center"
+                FontSize="Medium" />
+        </StackLayout>
+    </Frame>
 </ContentView>

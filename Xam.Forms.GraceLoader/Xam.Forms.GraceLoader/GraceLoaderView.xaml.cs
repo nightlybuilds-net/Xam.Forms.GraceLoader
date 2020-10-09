@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using System;
+using Xamarin.Forms;
 
 namespace Xam.Forms.GraceLoader
 {
@@ -54,6 +55,70 @@ namespace Xam.Forms.GraceLoader
                 this._activityIndicatorColor = value;
                 this.Indicator.Color = this.ActivityIndicatorColor;
             }
+        } 
+        
+        private Color _containerColor;
+        public Color ContainerColor
+        {
+            get => this._containerColor;
+            set
+            {
+                if (value == this._containerColor) return;
+                this._containerColor = value;
+                this.Container.BackgroundColor = this.ContainerColor;
+            }
         }
+        
+        private double _containerHeight;
+        public double ContainerHeight
+        {
+            get => this._containerHeight;
+            set
+            {
+                if (value == this._containerHeight) return;
+                this._containerHeight = value;
+                this.Container.HeightRequest = this.ContainerHeight;
+            }
+        }
+        
+        private double _containerWidth;
+        public double ContainerWidth
+        {
+            get => this._containerWidth;
+            set
+            {
+                if (value == this._containerWidth) return;
+                this._containerWidth = value;
+                this.Container.WidthRequest = this.ContainerWidth;
+            }
+        }
+        
+        private ContainerType _containerType;
+        public ContainerType ContainerType
+        {
+            get => this._containerType;
+            set
+            {
+                if (value == this._containerType) return;
+                this._containerType = value;
+                this.SetBorderRadiusBasedOnType(this.ContainerType);
+            }
+        }
+
+        private void SetBorderRadiusBasedOnType(ContainerType type)
+        {
+            this.Container.CornerRadius = type switch
+            {
+                ContainerType.Square => (float) this.Container.WidthRequest / 10,
+                ContainerType.Circle => (float) this.Container.WidthRequest / 2,
+                _ => throw new ArgumentOutOfRangeException(nameof(type), type, null)
+            };
+        }
+    }
+
+    public enum ContainerType
+    {
+        Square = 1,
+        Circle = 2
     }
 }

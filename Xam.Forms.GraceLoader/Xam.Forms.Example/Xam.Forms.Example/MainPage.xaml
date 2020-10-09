@@ -35,10 +35,15 @@
         <graceLoader:GraceLoaderView
             Grid.Row="0"
             Grid.RowSpan="2"
+            LoadingText="Loading"
             IsVisible="{Binding IsBusy}"
             LoadingTextColor="Black"
-            ActivityIndicatorColor="Red"
-            LoadingText="Loading" />
+            ActivityIndicatorColor="DarkBlue"
+            ContainerColor="Aquamarine"
+            ContainerWidth="100"
+            ContainerHeight="100"
+            ContainerType="Square"
+        />
     </Grid>
 
 </ContentPage>
