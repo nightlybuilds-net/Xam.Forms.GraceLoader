@@ -2,6 +2,13 @@
 
     <PropertyGroup>
         <TargetFramework>netstandard2.1</TargetFramework>
+        <Title>Xam.Forms.GraceLoader</Title>
+        <Authors>Gabriele Coppola for Nightly Builds</Authors>
+        <Description>Simple loader view for Xamarini Forms</Description>
+        <Copyright>Nightly Builds</Copyright>
+        <PackageProjectUrl>github.com/nightlybuilds-net/Xam.Forms.GraceLoader</PackageProjectUrl>
+        <RepositoryUrl>github.com/nightlybuilds-net/Xam.Forms.GraceLoader</RepositoryUrl>
+        <PackageTags>xamarin forms, loader, graceloader</PackageTags>
     </PropertyGroup>
 
     <ItemGroup>
