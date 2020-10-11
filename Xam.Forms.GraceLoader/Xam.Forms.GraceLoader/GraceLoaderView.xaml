@@ -12,22 +12,26 @@
         >
         <Grid
             Margin="5"
-            RowDefinitions="Auto,Auto,Auto">
+            RowDefinitions="Auto,*">
             <Image
                 Grid.Row="0"
                 x:Name="Image"
                 Aspect="AspectFit"/>
-            <ActivityIndicator
+            <StackLayout
                 Grid.Row="1"
-                x:Name="Indicator"
                 VerticalOptions="Center"
-                HorizontalOptions="Center"
-                IsRunning="True" />
-            <Label
-                Grid.Row="2"
-                x:Name="LoadingLabel"
-                HorizontalOptions="Center"
-                FontSize="Medium" />
+                Orientation="Vertical">
+                <ActivityIndicator
+                    x:Name="Indicator"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    IsRunning="True" />
+                <Label
+                    x:Name="LoadingLabel"
+                    HorizontalOptions="Center"
+                    FontSize="Medium" />
+            </StackLayout>
+
 </Grid>
     </Frame>
 </ContentView>

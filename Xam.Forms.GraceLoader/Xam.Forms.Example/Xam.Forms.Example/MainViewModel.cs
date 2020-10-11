@@ -10,6 +10,10 @@ namespace Xam.Forms.Example
 {
     public class MainViewModel: INotifyPropertyChanged
     {
+
+        public string[] Types => new[] {"Square", "Square Image", "Circle", "Circle Image"};
+        public int SelectedTypeIndex { get; set; }
+        
         public ICommand LoadCommand { get; set; }
         public MainViewModel()
         {
@@ -20,7 +24,34 @@ namespace Xam.Forms.Example
         {
             try
             {
-                this.IsBusy = true;
+                switch (this.SelectedTypeIndex)
+                {
+                    case 0:
+                        IsSquareVisible = true;
+                        IsSquareImageVisible = false;
+                        IsCircleVisible = false;
+                        IsCircleImageVisible = false;
+                        break;
+                    case 1:
+                        IsSquareVisible = false;
+                        IsSquareImageVisible = true;
+                        IsCircleVisible = false;
+                        IsCircleImageVisible = false;
+                        break;
+                    case 2:
+                        IsSquareVisible = false;
+                        IsSquareImageVisible = false;
+                        IsCircleVisible = true;
+                        IsCircleImageVisible = false;
+                        break;
+                    case 3:
+                        IsSquareVisible = false;
+                        IsSquareImageVisible = false;
+                        IsCircleVisible = false;
+                        IsCircleImageVisible = true;
+                        break;
+                }
+                
                 await Task.Delay(2000); //simulate long async operation
             }
             catch (Exception e)
@@ -29,22 +60,60 @@ namespace Xam.Forms.Example
             }
             finally
             {
-                this.IsBusy = false;
+                IsSquareVisible = false;
+                IsSquareImageVisible = false;
+                IsCircleVisible = false;
+                IsCircleImageVisible = false;
             }
         }
 
-        private bool _isBusy;
-        public bool IsBusy
+        private bool _isSquareVisible;
+        public bool IsSquareVisible
         {
-            get => _isBusy;
+            get => _isSquareVisible;
             set
             {
-                if (this._isBusy == value) return;
-                this._isBusy = value;
+                if (this._isSquareVisible == value) return;
+                this._isSquareVisible = value;
+                this.OnPropertyChanged();
+            }
+        }
+        
+        private bool _isCircleVisible;
+        public bool IsCircleVisible
+        {
+            get => _isCircleVisible;
+            set
+            {
+                if (this._isCircleVisible == value) return;
+                this._isCircleVisible = value;
                 this.OnPropertyChanged();
             }
         }
 
+        private bool _isCircleImageVisible;
+        public bool IsCircleImageVisible
+        {
+            get => _isCircleImageVisible;
+            set
+            {
+                if (this._isCircleImageVisible == value) return;
+                this._isCircleImageVisible = value;
+                this.OnPropertyChanged();
+            }
+        }
+        
+        private bool _isSquareImageVisible;
+        public bool IsSquareImageVisible
+        {
+            get => _isSquareImageVisible;
+            set
+            {
+                if (this._isSquareImageVisible == value) return;
+                this._isSquareImageVisible = value;
+                this.OnPropertyChanged();
+            }
+        }
 
         public event PropertyChangedEventHandler PropertyChanged;
 

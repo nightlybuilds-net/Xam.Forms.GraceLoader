@@ -22,21 +22,44 @@
             <Label
                 TextColor="Black"
                 HorizontalOptions="Center"
-                Text="Push the button below to start loading!" />
+                HorizontalTextAlignment="Center"
+                Text="Select type and push the button below to start loading!" />
         </StackLayout>
-        <Button
-            Margin="0,0,0,10"
+        
+        <StackLayout
             Grid.Row="1"
-            BackgroundColor="Aquamarine"
-            TextColor="Black"
-            Text="Load"
-            HorizontalOptions="FillAndExpand"
-            Command="{Binding LoadCommand}" />
+            Orientation="Vertical">
+            <Picker
+                Title="Select loader type"
+                BackgroundColor = "White"
+                TextColor="Black"
+                TitleColor="Black"
+                SelectedIndex="{Binding SelectedTypeIndex}"
+                ItemsSource="{Binding Types}"/>
+            <Button
+                Margin="0,0,0,10"
+                BackgroundColor="Aquamarine"
+                TextColor="Black"
+                Text="Load"
+                HorizontalOptions="FillAndExpand"
+                Command="{Binding LoadCommand}" />
+        </StackLayout>
+
         <graceLoader:GraceLoaderView
             Grid.Row="0"
             Grid.RowSpan="2"
             LoadingText="Loading"
-            IsVisible="{Binding IsBusy}"
+            IsVisible="{Binding IsSquareVisible}"
+            LoadingTextColor="Black"
+            ActivityIndicatorColor="DarkBlue"
+            ContainerColor="Aquamarine"
+            ContainerType="Square"
+        />
+        <graceLoader:GraceLoaderView
+            Grid.Row="0"
+            Grid.RowSpan="2"
+            LoadingText="Loading"
+            IsVisible="{Binding IsSquareImageVisible}"
             LoadingTextColor="Black"
             ActivityIndicatorColor="DarkBlue"
             ContainerColor="Aquamarine"
@@ -44,7 +67,29 @@
             ContainerHeight="260"
             ContainerType="Square"
             ImageUri="https://avatars3.githubusercontent.com/u/63703168"
-
+        />
+        <graceLoader:GraceLoaderView
+            Grid.Row="0"
+            Grid.RowSpan="2"
+            LoadingText="Loading"
+            IsVisible="{Binding IsCircleVisible}"
+            LoadingTextColor="Black"
+            ActivityIndicatorColor="DarkBlue"
+            ContainerColor="Aquamarine"
+            ContainerType="Circle"
+        />
+        <graceLoader:GraceLoaderView
+            Grid.Row="0"
+            Grid.RowSpan="2"
+            LoadingText="Loading"
+            IsVisible="{Binding IsCircleImageVisible}"
+            LoadingTextColor="Black"
+            ActivityIndicatorColor="DarkBlue"
+            ContainerColor="Aquamarine"
+            ContainerWidth="200"
+            ContainerHeight="260"
+            ContainerType="Circle"
+            ImageUri="https://avatars3.githubusercontent.com/u/63703168"
         />
     </Grid>
 

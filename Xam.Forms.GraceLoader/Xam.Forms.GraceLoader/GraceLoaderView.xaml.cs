@@ -18,6 +18,11 @@ namespace Xam.Forms.GraceLoader
                         await this.Container.FadeTo(1,2000);
                 }
             };
+
+            this.ContainerHeight = 100;
+            this.ContainerWidth = 100;
+            this.ContainerType = ContainerType.Square;
+            
         }
         
         public static readonly BindableProperty LoadingTextProperty =
@@ -102,6 +107,18 @@ namespace Xam.Forms.GraceLoader
                 this.Container.WidthRequest = this.ContainerWidth;
             }
         }        
+        
+        private double _imageHeight;
+        public double ImageHeight
+        {
+            get => this._imageHeight;
+            set
+            {
+                if (value == this._imageHeight) return;
+                this._imageHeight = value;
+                this.Image.HeightRequest = this.ImageHeight;
+            }
+        }
         
         private string _imageUri;
         public string ImageUri
