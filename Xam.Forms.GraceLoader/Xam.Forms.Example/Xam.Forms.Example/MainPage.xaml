@@ -6,7 +6,6 @@
              xmlns:example="clr-namespace:Xam.Forms.Example;assembly=Xam.Forms.Example"
              x:DataType="example:MainViewModel"
              x:Class="Xam.Forms.Example.MainPage">
-
     <Grid
         Margin="10,10"
         RowDefinitions="*,Auto">
