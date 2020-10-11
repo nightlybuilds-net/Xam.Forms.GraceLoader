@@ -91,6 +91,35 @@
             ContainerType="Circle"
             ImageUri="https://avatars3.githubusercontent.com/u/63703168"
         />
+        
+        <graceLoader:GraceLoaderView
+            Grid.Row="0"
+            Grid.RowSpan="2"
+            LoadingText="Loading"
+            IsVisible="{Binding IsCustomVisible}"
+            LoadingTextColor="Black"
+            ActivityIndicatorColor="DarkBlue"
+            ContainerColor="Aquamarine"
+            ContainerType="Custom"
+        >
+            <graceLoader:GraceLoaderView.CustomView>
+                <Grid
+                    RowDefinitions="*,*">
+                    <Label
+                        Grid.Row="0"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        Text="{Binding LoaderMessage1}"
+                        TextColor="Black"/>
+                    <Label
+                        Grid.Row="1"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        Text="{Binding LoaderMessage2}"
+                        TextColor="Black"/>
+                </Grid>
+            </graceLoader:GraceLoaderView.CustomView>
+        </graceLoader:GraceLoaderView>
     </Grid>
 
 </ContentPage>

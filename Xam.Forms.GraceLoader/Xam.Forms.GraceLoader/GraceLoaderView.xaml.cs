@@ -133,6 +133,7 @@ namespace Xam.Forms.GraceLoader
         }
         
         private ContainerType _containerType;
+
         public ContainerType ContainerType
         {
             get => this._containerType;
@@ -144,12 +145,27 @@ namespace Xam.Forms.GraceLoader
             }
         }
 
+        private object _customView;
+        public object CustomView
+        {
+            get => _customView;
+            set
+            {
+                if (this._customView == value) return;
+                _customView = value;
+                this.Content.Content = null;
+                this.Content.Content = (View)this._customView;
+                OnPropertyChanged();
+            }
+        }
+
         private void SetBorderRadiusBasedOnType(ContainerType type)
         {
             this.Container.CornerRadius = type switch
             {
                 ContainerType.Square => (float) this.Container.WidthRequest / 10,
                 ContainerType.Circle => (float) this.Container.WidthRequest / 2,
+                ContainerType.Custom => (float) this.Container.WidthRequest / 10,
                 _ => throw new ArgumentOutOfRangeException(nameof(type), type, null)
             };
         }
@@ -158,6 +174,7 @@ namespace Xam.Forms.GraceLoader
     public enum ContainerType
     {
         Square = 1,
-        Circle = 2
+        Circle = 2,
+        Custom = 3
     }
 }

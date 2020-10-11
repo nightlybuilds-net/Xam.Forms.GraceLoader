@@ -11,8 +11,11 @@ namespace Xam.Forms.Example
     public class MainViewModel: INotifyPropertyChanged
     {
 
-        public string[] Types => new[] {"Square", "Square Image", "Circle", "Circle Image"};
+        public string[] Types => new[] {"Square", "Square Image", "Circle", "Circle Image", "Custom"};
         public int SelectedTypeIndex { get; set; }
+
+        public string LoaderMessage1 => "Gerry";
+        public string LoaderMessage2 => "Muscle";
         
         public ICommand LoadCommand { get; set; }
         public MainViewModel()
@@ -31,24 +34,35 @@ namespace Xam.Forms.Example
                         IsSquareImageVisible = false;
                         IsCircleVisible = false;
                         IsCircleImageVisible = false;
+                        IsCustomVisible = false;
                         break;
                     case 1:
                         IsSquareVisible = false;
                         IsSquareImageVisible = true;
                         IsCircleVisible = false;
                         IsCircleImageVisible = false;
+                        IsCustomVisible = false;
                         break;
                     case 2:
                         IsSquareVisible = false;
                         IsSquareImageVisible = false;
                         IsCircleVisible = true;
                         IsCircleImageVisible = false;
+                        IsCustomVisible = false;
                         break;
                     case 3:
                         IsSquareVisible = false;
                         IsSquareImageVisible = false;
                         IsCircleVisible = false;
                         IsCircleImageVisible = true;
+                        IsCustomVisible = false;
+                        break;
+                    case 4:
+                        IsSquareVisible = false;
+                        IsSquareImageVisible = false;
+                        IsCircleVisible = false;
+                        IsCircleImageVisible = false;
+                        IsCustomVisible = true;
                         break;
                 }
                 
@@ -64,6 +78,7 @@ namespace Xam.Forms.Example
                 IsSquareImageVisible = false;
                 IsCircleVisible = false;
                 IsCircleImageVisible = false;
+                IsCustomVisible = false;
             }
         }
 
@@ -111,6 +126,18 @@ namespace Xam.Forms.Example
             {
                 if (this._isSquareImageVisible == value) return;
                 this._isSquareImageVisible = value;
+                this.OnPropertyChanged();
+            }
+        }
+        
+        private bool _isCustomVisible;
+        public bool IsCustomVisible
+        {
+            get => _isCustomVisible;
+            set
+            {
+                if (this._isCustomVisible == value) return;
+                this._isCustomVisible = value;
                 this.OnPropertyChanged();
             }
         }

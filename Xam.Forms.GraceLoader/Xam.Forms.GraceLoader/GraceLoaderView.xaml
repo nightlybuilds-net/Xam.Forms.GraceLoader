@@ -8,30 +8,31 @@
         Padding="0"
         VerticalOptions="Center"
         HorizontalOptions="Center"
-        x:Name="Container"
-        >
-        <Grid
-            Margin="5"
-            RowDefinitions="Auto,*">
-            <Image
-                Grid.Row="0"
-                x:Name="Image"
-                Aspect="AspectFit"/>
-            <StackLayout
-                Grid.Row="1"
-                VerticalOptions="Center"
-                Orientation="Vertical">
-                <ActivityIndicator
-                    x:Name="Indicator"
+        x:Name="Container">
+        <ContentView
+            x:Name="Content">
+            <Grid
+                Margin="5"
+                RowDefinitions="Auto,*">
+                <Image
+                    Grid.Row="0"
+                    x:Name="Image"
+                    Aspect="AspectFit" />
+                <StackLayout
+                    Grid.Row="1"
                     VerticalOptions="Center"
-                    HorizontalOptions="Center"
-                    IsRunning="True" />
-                <Label
-                    x:Name="LoadingLabel"
-                    HorizontalOptions="Center"
-                    FontSize="Medium" />
-            </StackLayout>
-
-</Grid>
+                    Orientation="Vertical">
+                    <ActivityIndicator
+                        x:Name="Indicator"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        IsRunning="True" />
+                    <Label
+                        x:Name="LoadingLabel"
+                        HorizontalOptions="Center"
+                        FontSize="Medium" />
+                </StackLayout>
+            </Grid>
+        </ContentView>
     </Frame>
 </ContentView>
