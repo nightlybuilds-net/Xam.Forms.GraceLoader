@@ -5,7 +5,7 @@
         <LangVersion>8</LangVersion>
         <Title>Xam.Forms.GraceLoader</Title>
         <Authors>Gabriele Coppola for Nightly Builds</Authors>
-        <Description>Simple loader view for Xamarini Forms</Description>
+        <Description>Simple loader view for Xamarin Forms</Description>
         <Copyright>Nightly Builds</Copyright>
         <PackageProjectUrl>github.com/nightlybuilds-net/Xam.Forms.GraceLoader</PackageProjectUrl>
         <RepositoryUrl>github.com/nightlybuilds-net/Xam.Forms.GraceLoader</RepositoryUrl>
