@@ -14,6 +14,8 @@ The package is compliant with [Semantic Versioning](https://semver.org/)
 
 Here are two video showing sample projects for on IPhone and Android Phone.
 
+![](ios.gif)
+![](droid.gif)
 
 
 ## How it works
