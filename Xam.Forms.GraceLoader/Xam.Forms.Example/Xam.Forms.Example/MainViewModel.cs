@@ -14,8 +14,8 @@ namespace Xam.Forms.Example
         public string[] Types => new[] {"Square", "Square Image", "Circle", "Circle Image", "Custom"};
         public int SelectedTypeIndex { get; set; }
 
-        public string LoaderMessage1 => "Gerry";
-        public string LoaderMessage2 => "Muscle";
+        public string LoaderMessage1 => "Some nice";
+        public string LoaderMessage2 => "content";
         
         public ICommand LoadCommand { get; set; }
         public MainViewModel()
