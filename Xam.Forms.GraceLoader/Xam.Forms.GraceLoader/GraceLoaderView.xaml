@@ -8,12 +8,16 @@
         Padding="0"
         VerticalOptions="Center"
         HorizontalOptions="Center"
+        HasShadow="True"
         x:Name="Container">
         <ContentView
             x:Name="Content">
             <Grid
-                Margin="5"
-                RowDefinitions="Auto,*">
+                Margin="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
                 <Image
                     Grid.Row="0"
                     x:Name="Image"

@@ -1,6 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exemple", "Exemple", "{8EA6C06B-701F-465A-B5DF-A1AF22760C88}"
+# Visual Studio 15
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Example", "Example", "{8EA6C06B-701F-465A-B5DF-A1AF22760C88}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xam.Forms.Example", "Xam.Forms.Example\Xam.Forms.Example\Xam.Forms.Example.csproj", "{C6BCBA2F-1DD9-4FB6-8519-B4C0DB33C163}"
 EndProject

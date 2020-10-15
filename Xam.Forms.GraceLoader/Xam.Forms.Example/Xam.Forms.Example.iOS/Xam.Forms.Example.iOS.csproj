@@ -106,11 +106,11 @@
         <Reference Include="Xamarin.iOS" />
     </ItemGroup>
     <ItemGroup>
-        <PackageReference Include="Xamarin.Forms" Version="4.8.0.1534" />
+        <PackageReference Include="Xamarin.Forms" Version="4.5.0.725" />
     </ItemGroup>
     <ItemGroup>
         <ProjectReference Include="..\Xam.Forms.Example\Xam.Forms.Example.csproj">
-            <Project>{28B58302-9671-455B-B719-F03F28A92936}</Project>
+            <Project>{C6BCBA2F-1DD9-4FB6-8519-B4C0DB33C163}</Project>
             <Name>Xam.Forms.Example</Name>
         </ProjectReference>
     </ItemGroup>

@@ -8,7 +8,7 @@ using Android.OS;
 
 namespace Xam.Forms.Example.Android
 {
-    [Activity(Label = "Xam.Forms.Example", Theme = "@style/MainTheme", MainLauncher = true,
+    [Activity(Label = "GraceLoader.Example", Theme = "@style/MainTheme", MainLauncher = true,
         ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {

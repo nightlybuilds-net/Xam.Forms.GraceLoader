@@ -14,7 +14,6 @@
         <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
         <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
         <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-        <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
         <TargetFrameworkVersion>v10.0</TargetFrameworkVersion>
         <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
     </PropertyGroup>
@@ -47,11 +46,12 @@
     </ItemGroup>
     <ItemGroup>
         <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.2.0.4" />
+        <PackageReference Include="Xamarin.AndroidX.AppCompat.Resources" Version="1.1.0.1" />
         <PackageReference Include="Xamarin.AndroidX.CardView" Version="1.0.0.5" />
         <PackageReference Include="Xamarin.AndroidX.Legacy.Support.Core.Utils" Version="1.0.0.5" />
         <PackageReference Include="Xamarin.AndroidX.Legacy.Support.V4" Version="1.0.0.5" />
         <PackageReference Include="Xamarin.AndroidX.MediaRouter" Version="1.1.0.5" />
-        <PackageReference Include="Xamarin.Forms" Version="4.8.0.1534" />
+        <PackageReference Include="Xamarin.Forms" Version="4.5.0.725" />
     </ItemGroup>
     <ItemGroup>
         <Compile Include="MainActivity.cs" />
@@ -71,7 +71,7 @@
     </ItemGroup>
     <ItemGroup>
         <ProjectReference Include="..\Xam.Forms.Example\Xam.Forms.Example.csproj">
-            <Project>{28B58302-9671-455B-B719-F03F28A92936}</Project>
+            <Project>{C6BCBA2F-1DD9-4FB6-8519-B4C0DB33C163}</Project>
             <Name>Xam.Forms.Example</Name>
         </ProjectReference>
     </ItemGroup>

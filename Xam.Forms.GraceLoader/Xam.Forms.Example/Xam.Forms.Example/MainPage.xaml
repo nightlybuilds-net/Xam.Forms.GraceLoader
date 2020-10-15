@@ -5,10 +5,14 @@
              xmlns:graceLoader="clr-namespace:Xam.Forms.GraceLoader;assembly=Xam.Forms.GraceLoader"
              xmlns:example="clr-namespace:Xam.Forms.Example;assembly=Xam.Forms.Example"
              x:DataType="example:MainViewModel"
+             BackgroundColor="White"
              x:Class="Xam.Forms.Example.MainPage">
     <Grid
-        Margin="10,10"
-        RowDefinitions="*,Auto">
+        Margin="10,10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
         <StackLayout
             TranslationY="-100"
             Grid.Row="0"
@@ -100,10 +104,13 @@
             ActivityIndicatorColor="DarkBlue"
             ContainerColor="Aquamarine"
             ContainerType="Custom"
-        >
+       >
             <graceLoader:GraceLoaderView.CustomView>
-                <Grid
-                    RowDefinitions="*,*">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
                     <Label
                         Grid.Row="0"
                         HorizontalOptions="Center"
