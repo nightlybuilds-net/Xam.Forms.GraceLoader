@@ -34,6 +34,7 @@
                     <Label
                         x:Name="LoadingLabel"
                         HorizontalOptions="Center"
+                        HorizontalTextAlignment="Center"
                         FontSize="Medium" />
                 </StackLayout>
             </Grid>
